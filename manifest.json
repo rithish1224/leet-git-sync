@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode GitHub Sync",
+  "version": "0.1.0",
+  "description": "Automatically sync accepted LeetCode submissions to GitHub.",
+  "permissions": ["identity"],
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/problems/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background" : {
+    "service_worker":"background.js"
+  } 
+}
